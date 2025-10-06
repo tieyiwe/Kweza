@@ -1,70 +1,33 @@
-import { type Registration, type InsertRegistration } from "@shared/schema";
-import { randomUUID } from "crypto";
+import { type Registration, type InsertRegistration, registrations } from "@shared/schema";
+import { db } from "./db";
+import { eq } from "drizzle-orm";
 
 export interface IStorage {
-  getUser(id: string): Promise<any | undefined>;
-  getUserByUsername(username: string): Promise<any | undefined>;
-  createUser(user: any): Promise<any>;
   createRegistration(registration: InsertRegistration): Promise<Registration>;
   getAllRegistrations(): Promise<Registration[]>;
   getRegistrationById(id: string): Promise<Registration | undefined>;
 }
 
-export class MemStorage implements IStorage {
-  private users: Map<string, any>;
-  private registrations: Map<string, Registration>;
-
-  constructor() {
-    this.users = new Map();
-    this.registrations = new Map();
-  }
-
-  async getUser(id: string): Promise<any | undefined> {
-    return this.users.get(id);
-  }
-
-  async getUserByUsername(username: string): Promise<any | undefined> {
-    return Array.from(this.users.values()).find(
-      (user) => user.username === username,
-    );
-  }
-
-  async createUser(insertUser: any): Promise<any> {
-    const id = randomUUID();
-    const user: any = { ...insertUser, id };
-    this.users.set(id, user);
-    return user;
-  }
-
+export class DatabaseStorage implements IStorage {
   async createRegistration(insertRegistration: InsertRegistration): Promise<Registration> {
-    const id = randomUUID();
-    const registration: Registration = {
-      ...insertRegistration,
-      id,
-      address: insertRegistration.address || null,
-      farmSize: insertRegistration.farmSize || null,
-      crops: insertRegistration.crops || null,
-      farmingExperience: insertRegistration.farmingExperience || null,
-      averageYield: insertRegistration.averageYield || null,
-      businessName: insertRegistration.businessName || null,
-      businessType: insertRegistration.businessType || null,
-      products: insertRegistration.products || null,
-      monthlyVolume: insertRegistration.monthlyVolume || null,
-      yearsInBusiness: insertRegistration.yearsInBusiness || null,
-      creditNeeds: insertRegistration.creditNeeds || null,
-      comments: insertRegistration.comments || null,
-    };
-    this.registrations.set(id, registration);
+    const [registration] = await db
+      .insert(registrations)
+      .values(insertRegistration)
+      .returning();
     return registration;
   }
 
   async getAllRegistrations(): Promise<Registration[]> {
-    return Array.from(this.registrations.values());
+    return await db.select().from(registrations);
   }
 
   async getRegistrationById(id: string): Promise<Registration | undefined> {
-    return this.registrations.get(id);
+    const [registration] = await db
+      .select()
+      .from(registrations)
+      .where(eq(registrations.id, id));
+    return registration || undefined;
   }
 }
 
-export const storage = new MemStorage();
+export const storage = new DatabaseStorage();
