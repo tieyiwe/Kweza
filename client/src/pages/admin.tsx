@@ -1,21 +1,54 @@
+import { useState, useMemo } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "wouter";
 import { type Registration } from "@shared/schema";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Sprout, Users, Store, Tractor, Mail, Phone, MapPin, Download } from "lucide-react";
+import { Sprout, Users, Store, Tractor, Mail, Phone, MapPin, Download, Search, X } from "lucide-react";
 
 export default function Admin() {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [regionFilter, setRegionFilter] = useState<string>("all");
+
   const { data, isLoading } = useQuery<{ success: boolean; registrations: Registration[] }>({
     queryKey: ["/api/registrations"],
   });
 
   const registrations = data?.registrations || [];
-  const farmers = registrations.filter(r => r.role === 'farmer');
-  const sellers = registrations.filter(r => r.role === 'seller');
+
+  const filteredRegistrations = useMemo(() => {
+    let filtered = registrations;
+
+    if (searchQuery) {
+      const query = searchQuery.trim().toLowerCase();
+      filtered = filtered.filter(r => 
+        r.fullName.toLowerCase().includes(query) ||
+        r.email.toLowerCase().includes(query) ||
+        r.phone.includes(query) ||
+        (r.businessName && r.businessName.toLowerCase().includes(query)) ||
+        (r.region && r.region.toLowerCase().includes(query))
+      );
+    }
+
+    if (regionFilter !== "all") {
+      filtered = filtered.filter(r => r.region === regionFilter);
+    }
+
+    return filtered;
+  }, [registrations, searchQuery, regionFilter]);
+
+  const farmers = filteredRegistrations.filter(r => r.role === 'farmer');
+  const sellers = filteredRegistrations.filter(r => r.role === 'seller');
+
+  const uniqueRegions = useMemo(() => {
+    const regions = new Set(registrations.map(r => r.region));
+    return Array.from(regions).sort();
+  }, [registrations]);
 
   if (isLoading) {
     return (
@@ -54,7 +87,43 @@ export default function Admin() {
       </header>
 
       <main className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
-        <div className="flex justify-end mb-6">
+        <div className="flex flex-col sm:flex-row gap-4 justify-between mb-6">
+          <div className="flex flex-col sm:flex-row gap-4 flex-1">
+            <div className="relative flex-1 max-w-md">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+              <Input
+                data-testid="input-search"
+                placeholder="Search by name, email, phone, or business..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="pl-10 pr-10"
+              />
+              {searchQuery && (
+                <button
+                  data-testid="button-clear-search"
+                  onClick={() => setSearchQuery("")}
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                >
+                  <X className="h-4 w-4" />
+                </button>
+              )}
+            </div>
+
+            <Select value={regionFilter} onValueChange={setRegionFilter}>
+              <SelectTrigger data-testid="select-region-filter" className="w-full sm:w-[200px]">
+                <SelectValue placeholder="Filter by region" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="all">All Regions</SelectItem>
+                {uniqueRegions.map(region => (
+                  <SelectItem key={region} value={region}>
+                    {region ? region.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ') : 'Unknown'}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+
           <Button
             data-testid="button-export-csv"
             onClick={() => window.location.href = '/api/registrations/export/csv'}
@@ -72,9 +141,9 @@ export default function Admin() {
               <Users className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold" data-testid="text-total-count">{registrations.length}</div>
+              <div className="text-2xl font-bold" data-testid="text-total-count">{filteredRegistrations.length}</div>
               <p className="text-xs text-muted-foreground">
-                All farmers and sellers
+                {searchQuery || regionFilter !== "all" ? `Filtered from ${registrations.length} total` : 'All farmers and sellers'}
               </p>
             </CardContent>
           </Card>
@@ -87,7 +156,7 @@ export default function Admin() {
             <CardContent>
               <div className="text-2xl font-bold" data-testid="text-farmers-count">{farmers.length}</div>
               <p className="text-xs text-muted-foreground">
-                Registered farmers
+                {searchQuery || regionFilter !== "all" ? 'In filtered results' : 'Registered farmers'}
               </p>
             </CardContent>
           </Card>
@@ -100,7 +169,7 @@ export default function Admin() {
             <CardContent>
               <div className="text-2xl font-bold" data-testid="text-sellers-count">{sellers.length}</div>
               <p className="text-xs text-muted-foreground">
-                Registered sellers
+                {searchQuery || regionFilter !== "all" ? 'In filtered results' : 'Registered sellers'}
               </p>
             </CardContent>
           </Card>
@@ -108,13 +177,13 @@ export default function Admin() {
 
         <Tabs defaultValue="all" className="w-full">
           <TabsList className="grid w-full md:w-auto grid-cols-3">
-            <TabsTrigger value="all" data-testid="tab-all">All ({registrations.length})</TabsTrigger>
+            <TabsTrigger value="all" data-testid="tab-all">All ({filteredRegistrations.length})</TabsTrigger>
             <TabsTrigger value="farmers" data-testid="tab-farmers">Farmers ({farmers.length})</TabsTrigger>
             <TabsTrigger value="sellers" data-testid="tab-sellers">Sellers ({sellers.length})</TabsTrigger>
           </TabsList>
 
           <TabsContent value="all">
-            <RegistrationTable registrations={registrations} />
+            <RegistrationTable registrations={filteredRegistrations} />
           </TabsContent>
 
           <TabsContent value="farmers">
