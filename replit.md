@@ -1,8 +1,14 @@
 # Overview
 
-This is a full-stack web application built for agricultural registration and management, specifically designed for the Democratic Republic of Congo. The application allows farmers and sellers to register their information, including details about their agricultural products, business operations, and credit needs. It features a modern React frontend with a Node.js/Express backend, using PostgreSQL for data persistence.
+This is a full-stack web application built for agricultural registration and management, specifically designed for the Democratic Republic of Congo (Kweza platform). The application allows farmers and sellers to register their information, including details about their agricultural products, business operations, and credit needs. It features a modern React frontend with a Node.js/Express backend, using PostgreSQL for data persistence.
 
-The application is built as a single-page application (SPA) with a registration form that adapts based on the user's role (farmer or seller), collecting role-specific information while maintaining a clean, user-friendly interface.
+The application includes:
+- **Public Registration Form** (/) - Dual-purpose form for farmers and sellers with role-specific fields
+- **Admin Dashboard** (/admin) - View, search, filter, and export all registrations
+- **Database Persistence** - PostgreSQL with Drizzle ORM for permanent data storage
+- **CSV Export** - Download all registration data with proper formatting
+
+Last updated: October 6, 2025
 
 # User Preferences
 
@@ -33,7 +39,8 @@ Preferred communication style: Simple, everyday language.
 **API Design**: RESTful API endpoints for registration management:
 - POST `/api/registrations` - Create new registration
 - GET `/api/registrations` - Retrieve all registrations  
-- GET `/api/registrations/:id` - Retrieve specific registration
+- GET `/api/registrations/:id` - Retrieve specific registration by ID
+- GET `/api/registrations/export/csv` - Export all registrations as CSV file
 
 **Error Handling**: Centralized error handling with Zod validation errors returning structured 400 responses, and generic errors returning 500 responses.
 
@@ -51,9 +58,36 @@ Preferred communication style: Simple, everyday language.
 - Seller-specific: businessName, businessType, products, monthlyVolume, yearsInBusiness
 - Additional: creditNeeds, comments, termsAccepted
 
-**Development Storage**: In-memory storage implementation (MemStorage) allows development without database connection, with the same interface as the production storage layer.
+**Database Connection**: The application uses Drizzle ORM with the Neon serverless PostgreSQL driver. Database connection is configured in `server/db.ts` using the DATABASE_URL environment variable. Schema is automatically synced using `npm run db:push`.
 
 **Rationale**: This hybrid approach (nullable role-specific columns) was chosen over separate tables to simplify queries and reduce joins, as the use cases for farmers and sellers share significant overlap. Drizzle provides compile-time type safety without the overhead of heavier ORMs.
+
+## Application Features
+
+### Registration Form (/)
+- **Role Selection**: Users choose between Farmer or Seller roles
+- **Personal Information**: Name, phone, email, region (Congo province), optional address
+- **Farmer Fields**: Farm size (hectares), crops grown (multi-select), farming experience, average yield
+- **Seller Fields**: Business name, business type, products sold (multi-select), monthly volume, years in business
+- **Additional Info**: Estimated credit line needed, comments, terms acceptance
+- **Validation**: Real-time form validation with Zod schema
+- **Success Feedback**: Modal confirmation with form reset after successful submission
+
+### Admin Dashboard (/admin)
+- **Statistics Cards**: Total registrations, farmers count, sellers count
+- **Search Functionality**: Search across name, email, phone, business name, and region (case-insensitive, trimmed)
+- **Region Filter**: Dropdown filter to view registrations from specific Congo provinces
+- **Role Tabs**: Filter view by All / Farmers / Sellers
+- **Registration Table**: Displays full details including contact info, location, and role-specific data
+- **CSV Export**: Download all registration data as properly formatted CSV file with RFC 4180 escaping
+- **Responsive Design**: Works seamlessly on mobile and desktop devices
+
+### CSV Export Feature
+- **Comprehensive Data**: Exports all fields including role-specific information
+- **Proper Escaping**: Handles special characters (quotes, commas, newlines) correctly per RFC 4180
+- **Array Formatting**: Crops and products displayed with semicolon separators
+- **Download**: Sets proper Content-Type and Content-Disposition headers
+- **Filename**: kweza-registrations.csv
 
 ## External Dependencies
 
