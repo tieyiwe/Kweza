@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { Link } from "wouter";
 import { insertRegistrationSchema, type InsertRegistration } from "@shared/schema";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
@@ -166,14 +167,23 @@ export default function Registration() {
       {/* Header */}
       <header className="bg-card shadow-sm border-b border-border">
         <div className="max-w-4xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
-              <Sprout className="text-2xl text-primary-foreground" />
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+                <Sprout className="text-2xl text-primary-foreground" />
+              </div>
+              <div>
+                <h1 className="text-2xl font-bold text-foreground">Kweza</h1>
+                <p className="text-sm text-muted-foreground">Connecting Farmers & Sellers in Congo</p>
+              </div>
             </div>
-            <div>
-              <h1 className="text-2xl font-bold text-foreground">Kweza</h1>
-              <p className="text-sm text-muted-foreground">Connecting Farmers & Sellers in Congo</p>
-            </div>
+            <Link 
+              href="/admin" 
+              data-testid="link-admin"
+              className="text-sm text-muted-foreground hover:text-primary transition-colors"
+            >
+              Admin Dashboard
+            </Link>
           </div>
         </div>
       </header>
