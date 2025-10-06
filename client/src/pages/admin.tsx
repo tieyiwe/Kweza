@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Sprout, Users, Store, Tractor, Mail, Phone, MapPin } from "lucide-react";
+import { Sprout, Users, Store, Tractor, Mail, Phone, MapPin, Download } from "lucide-react";
 
 export default function Admin() {
   const { data, isLoading } = useQuery<{ success: boolean; registrations: Registration[] }>({
@@ -54,6 +54,17 @@ export default function Admin() {
       </header>
 
       <main className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
+        <div className="flex justify-end mb-6">
+          <Button
+            data-testid="button-export-csv"
+            onClick={() => window.location.href = '/api/registrations/export/csv'}
+            variant="outline"
+          >
+            <Download className="h-4 w-4 mr-2" />
+            Export to CSV
+          </Button>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">

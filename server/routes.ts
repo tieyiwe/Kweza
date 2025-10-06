@@ -61,6 +61,79 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Export registrations as CSV
+  app.get("/api/registrations/export/csv", async (req, res) => {
+    try {
+      const registrations = await storage.getAllRegistrations();
+      
+      const escapeCSV = (value: any): string => {
+        if (value === null || value === undefined) return '';
+        const str = String(value);
+        if (str.includes('"') || str.includes(',') || str.includes('\n') || str.includes('\r')) {
+          return `"${str.replace(/"/g, '""').replace(/\r?\n/g, ' ')}"`;
+        }
+        return str;
+      };
+
+      const csvHeader = [
+        'ID',
+        'Role',
+        'Full Name',
+        'Phone',
+        'Email',
+        'Region',
+        'Address',
+        'Farm Size (ha)',
+        'Crops',
+        'Farming Experience (years)',
+        'Average Yield (tons)',
+        'Business Name',
+        'Business Type',
+        'Products',
+        'Monthly Volume (tons)',
+        'Years in Business',
+        'Credit Needs',
+        'Comments',
+        'Terms Accepted'
+      ].join(',');
+
+      const csvRows = registrations.map(reg => {
+        return [
+          escapeCSV(reg.id),
+          escapeCSV(reg.role),
+          escapeCSV(reg.fullName),
+          escapeCSV(reg.phone),
+          escapeCSV(reg.email),
+          escapeCSV(reg.region),
+          escapeCSV(reg.address),
+          escapeCSV(reg.farmSize),
+          escapeCSV(reg.crops ? reg.crops.join('; ') : ''),
+          escapeCSV(reg.farmingExperience),
+          escapeCSV(reg.averageYield),
+          escapeCSV(reg.businessName),
+          escapeCSV(reg.businessType),
+          escapeCSV(reg.products ? reg.products.join('; ') : ''),
+          escapeCSV(reg.monthlyVolume),
+          escapeCSV(reg.yearsInBusiness),
+          escapeCSV(reg.creditNeeds),
+          escapeCSV(reg.comments),
+          escapeCSV(reg.termsAccepted)
+        ].join(',');
+      });
+
+      const csv = [csvHeader, ...csvRows].join('\n');
+
+      res.setHeader('Content-Type', 'text/csv');
+      res.setHeader('Content-Disposition', 'attachment; filename=kweza-registrations.csv');
+      res.send(csv);
+    } catch (error) {
+      res.status(500).json({ 
+        success: false, 
+        message: "Internal server error" 
+      });
+    }
+  });
+
   const httpServer = createServer(app);
   return httpServer;
 }
