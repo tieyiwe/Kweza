@@ -37,6 +37,14 @@ export default {
           DEFAULT: "var(--accent)",
           foreground: "var(--accent-foreground)",
         },
+        terracotta: {
+          DEFAULT: "var(--terracotta)",
+          foreground: "var(--terracotta-foreground)",
+        },
+        forest: {
+          DEFAULT: "var(--forest)",
+          foreground: "var(--forest-foreground)",
+        },
         destructive: {
           DEFAULT: "var(--destructive)",
           foreground: "var(--destructive-foreground)",
@@ -84,10 +92,20 @@ export default {
             height: "0",
           },
         },
+        "blob-drift": {
+          "0%, 100%": { transform: "translate(0, 0) scale(1)" },
+          "50%": { transform: "translate(4%, -6%) scale(1.08)" },
+        },
+        "count-up": {
+          from: { opacity: "0", transform: "translateY(6px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "blob-drift": "blob-drift 16s ease-in-out infinite",
+        "blob-drift-slow": "blob-drift 22s ease-in-out infinite reverse",
       },
     },
   },
