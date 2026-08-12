@@ -45,6 +45,35 @@ export const sw: Translations = {
       },
     ],
   },
+  financingGap: {
+    eyebrow: "Uhalisia wa kiuchumi",
+    title: "Ukosefu wa mkopo unarudisha nyuma uchumi mzima wa Kongo",
+    subtitle:
+      "Si tatizo la mkulima au muuzaji mmoja tu — ni kizuizi cha kimuundo kinacholemea sekta nzima ya kilimo nchini DRC.",
+    stats: [
+      {
+        value: 53,
+        suffix: "%",
+        label: "ya biashara ndogo na za kati nchini Kongo hazipati mkopo wanaohitaji kukua.",
+      },
+      {
+        value: 26,
+        suffix: "% ya Pato la Taifa",
+        label: "ndiyo kiwango kinachokadiriwa cha pengo la mkopo lisilotimizwa kwa biashara ndogo na za kati nchini DRC.",
+      },
+      {
+        value: 64,
+        suffix: "%",
+        label: "ya ajira nchini DRC zinategemea kilimo — sekta isiyo na upatikanaji mzuri wa mkopo rasmi.",
+      },
+    ],
+    sourceNote:
+      "Vyanzo: Kundi la Benki ya Dunia / IFC — pengo la mkopo la biashara ndogo na za kati DRC; Benki ya Dunia — ajira za kilimo DRC (2019).",
+    bridgeTitle: "Kuwezaa ilijengwa kuziba pengo hilo",
+    bridgeBody:
+      "Kwa kuunganisha wakulima moja kwa moja na wauzaji, na kuwapa wauzaji waliohitimu mkopo wa kununua bila kulipa kila kitu mapema, Kuwezaa inaweka mkopo na fursa za soko pale ambapo mfumo wa kifedha wa kawaida haufikii.",
+    bridgeCta: "Tazama jinsi inavyofanya kazi",
+  },
   howItWorks: {
     eyebrow: "Jinsi inavyofanya kazi",
     title: "Jinsi inavyofanya kazi",

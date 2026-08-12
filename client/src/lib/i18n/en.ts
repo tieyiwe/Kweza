@@ -45,6 +45,34 @@ export const en: Translations = {
       },
     ],
   },
+  financingGap: {
+    eyebrow: "The economic reality",
+    title: "The lack of financing is holding back the whole Congolese economy",
+    subtitle:
+      "This isn't just one farmer's or seller's problem at a time — it's a structural drag weighing on the entire Congolese agricultural sector.",
+    stats: [
+      {
+        value: 53,
+        suffix: "%",
+        label: "of Congolese small and medium businesses can't get the credit they need to grow.",
+      },
+      {
+        value: 26,
+        suffix: "% of GDP",
+        label: "is the estimated size of the unmet MSME financing gap in the DRC.",
+      },
+      {
+        value: 64,
+        suffix: "%",
+        label: "of jobs in the DRC depend on agriculture — a sector with almost no access to formal credit.",
+      },
+    ],
+    sourceNote: "Sources: World Bank Group / IFC — DRC MSME finance gap; World Bank — DRC agricultural employment (2019).",
+    bridgeTitle: "Kuwezaa was built to close that gap",
+    bridgeBody:
+      "By connecting farmers directly with sellers, and giving qualified sellers a credit line to buy without paying everything upfront, Kuwezaa puts credit and market access where the traditional financial system doesn't reach.",
+    bridgeCta: "See how it works",
+  },
   howItWorks: {
     eyebrow: "How it works",
     title: "How it works",

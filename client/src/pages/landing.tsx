@@ -5,6 +5,7 @@ import { SiteHeader } from "@/components/landing/SiteHeader";
 import { WhatsAppFloatingButton } from "@/components/landing/WhatsAppFloatingButton";
 import { Hero } from "@/components/landing/Hero";
 import { ProblemSection } from "@/components/landing/ProblemSection";
+import { FinancingGapSection } from "@/components/landing/FinancingGapSection";
 import { HowItWorks } from "@/components/landing/HowItWorks";
 import { CreditLineSection } from "@/components/landing/CreditLineSection";
 import { ImpactSection } from "@/components/landing/ImpactSection";
@@ -41,6 +42,7 @@ export default function Landing() {
         <main>
           <Hero />
           <ProblemSection />
+          <FinancingGapSection />
           <HowItWorks />
           <CreditLineSection />
           <ImpactSection />

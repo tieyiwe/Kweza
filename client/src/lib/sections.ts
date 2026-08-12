@@ -1,6 +1,7 @@
 export const SECTION_IDS = {
   hero: "accueil",
   problem: "defis",
+  financingGap: "deficit-financement",
   howItWorks: "comment-ca-marche",
   creditLine: "ligne-de-credit",
   impact: "impact",

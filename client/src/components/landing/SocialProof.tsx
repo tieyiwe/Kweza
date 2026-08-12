@@ -1,36 +1,17 @@
-import { useEffect, useState } from "react";
 import { Quote, Sprout, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Reveal, useReveal } from "@/hooks/use-reveal";
+import { Reveal } from "@/hooks/use-reveal";
+import { CountUpNumber } from "./CountUpNumber";
 import { useLanguage } from "@/contexts/language-context";
 import { useRegistrationIntent } from "@/contexts/registration-intent-context";
 import { SECTION_IDS } from "@/lib/sections";
 import { STATS, TESTIMONIALS, type StatItem } from "@/lib/constants";
 
 function CountUpStat({ stat }: { stat: StatItem }) {
-  const { ref, visible } = useReveal<HTMLDivElement>();
-  const [value, setValue] = useState(0);
-
-  useEffect(() => {
-    if (!visible) return;
-    const duration = 1200;
-    const start = performance.now();
-
-    let frame: number;
-    const tick = (now: number) => {
-      const progress = Math.min((now - start) / duration, 1);
-      setValue(Math.round(progress * stat.value));
-      if (progress < 1) frame = requestAnimationFrame(tick);
-    };
-    frame = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(frame);
-  }, [visible, stat.value]);
-
   return (
-    <div ref={ref} className="text-center" data-testid={`stat-${stat.label}`}>
+    <div className="text-center" data-testid={`stat-${stat.label}`}>
       <p className="text-4xl font-bold text-primary">
-        {value.toLocaleString()}
-        {stat.suffix}
+        <CountUpNumber value={stat.value} suffix={stat.suffix ?? ""} />
       </p>
       <p className="mt-1 text-sm text-muted-foreground">{stat.label}</p>
     </div>

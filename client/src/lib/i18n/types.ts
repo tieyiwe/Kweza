@@ -39,6 +39,16 @@ export interface Translations {
     subtitle: string;
     points: Step[];
   };
+  financingGap: {
+    eyebrow: string;
+    title: string;
+    subtitle: string;
+    stats: { value: number; suffix: string; label: string }[];
+    sourceNote: string;
+    bridgeTitle: string;
+    bridgeBody: string;
+    bridgeCta: string;
+  };
   howItWorks: {
     eyebrow: string;
     title: string;

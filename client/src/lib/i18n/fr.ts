@@ -45,6 +45,35 @@ export const fr: Translations = {
       },
     ],
   },
+  financingGap: {
+    eyebrow: "La réalité économique",
+    title: "Le manque de financement freine toute l'économie congolaise",
+    subtitle:
+      "Ce n'est pas seulement le problème d'un agriculteur ou d'un vendeur à la fois — c'est un frein structurel qui pèse sur tout le secteur agricole congolais.",
+    stats: [
+      {
+        value: 53,
+        suffix: "%",
+        label: "des petites et moyennes entreprises congolaises n'arrivent pas à obtenir le crédit dont elles ont besoin pour grandir.",
+      },
+      {
+        value: 26,
+        suffix: "% du PIB",
+        label: "c'est l'ampleur estimée du déficit de financement non couvert pour les PME en RDC.",
+      },
+      {
+        value: 64,
+        suffix: "%",
+        label: "des emplois en RDC dépendent de l'agriculture — un secteur presque sans accès au crédit formel.",
+      },
+    ],
+    sourceNote:
+      "Sources : Groupe Banque mondiale / IFC — déficit de financement des PME en RDC ; Banque mondiale — emploi agricole en RDC (2019).",
+    bridgeTitle: "Kuwezaa a été conçu pour combler ce vide",
+    bridgeBody:
+      "En connectant directement les agriculteurs aux vendeurs, et en donnant aux vendeurs qualifiés une ligne de crédit pour acheter sans payer tout d'avance, Kuwezaa remet du crédit et des débouchés là où le système financier classique n'arrive pas.",
+    bridgeCta: "Voir comment ça marche",
+  },
   howItWorks: {
     eyebrow: "Le fonctionnement",
     title: "Comment ça marche",
