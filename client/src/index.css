@@ -17,6 +17,10 @@
   --muted-foreground: hsl(0, 0%, 45%);
   --accent: hsl(43, 96%, 56%);
   --accent-foreground: hsl(0, 0%, 15%);
+  --terracotta: hsl(16, 62%, 54%);
+  --terracotta-foreground: hsl(0, 0%, 100%);
+  --forest: hsl(152, 45%, 13%);
+  --forest-foreground: hsl(40, 23%, 97%);
   --destructive: hsl(356.3033, 90.5579%, 54.3137%);
   --destructive-foreground: hsl(0, 0%, 100%);
   --border: hsl(0, 0%, 89%);
@@ -66,6 +70,10 @@
   --muted-foreground: hsl(210, 3.3898%, 46.2745%);
   --accent: hsl(43, 96%, 56%);
   --accent-foreground: hsl(0, 0%, 15%);
+  --terracotta: hsl(16, 62%, 54%);
+  --terracotta-foreground: hsl(0, 0%, 100%);
+  --forest: hsl(152, 45%, 8%);
+  --forest-foreground: hsl(40, 23%, 97%);
   --destructive: hsl(356.3033, 90.5579%, 54.3137%);
   --destructive-foreground: hsl(0, 0%, 100%);
   --border: hsl(210, 5.2632%, 14.9020%);
@@ -103,7 +111,49 @@
     @apply border-border;
   }
 
+  html {
+    @apply scroll-smooth;
+  }
+
   body {
     @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+
+  .flow-track {
+    stroke-dasharray: 10 9;
+    animation: flow-dash 3.2s linear infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .flow-track {
+      animation: none;
+    }
+  }
+}
+
+@keyframes flow-dash {
+  to {
+    stroke-dashoffset: -190;
   }
 }

@@ -71,7 +71,7 @@ export default function Admin() {
                 <Sprout className="text-2xl text-primary-foreground" />
               </div>
               <div>
-                <h1 className="text-2xl font-bold text-foreground">Kweza Admin</h1>
+                <h1 className="text-2xl font-bold text-foreground">Kuwezaa Admin</h1>
                 <p className="text-sm text-muted-foreground">Registration Dashboard</p>
               </div>
             </div>

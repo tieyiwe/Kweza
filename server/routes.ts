@@ -124,7 +124,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const csv = [csvHeader, ...csvRows].join('\n');
 
       res.setHeader('Content-Type', 'text/csv');
-      res.setHeader('Content-Disposition', 'attachment; filename=kweza-registrations.csv');
+      res.setHeader('Content-Disposition', 'attachment; filename=kuwezaa-registrations.csv');
       res.send(csv);
     } catch (error) {
       res.status(500).json({ 

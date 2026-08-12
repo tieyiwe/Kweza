@@ -1,0 +1,32 @@
+# Kuwezaa
+
+> Kuwezaa relie les agriculteurs congolais aux vendeurs qualifiés grâce à une ligne de crédit simple, pour un marché plus stable et des récoltes mieux vendues.
+
+Kuwezaa est une plateforme numérique qui connecte les agriculteurs et les vendeurs de produits agricoles en République Démocratique du Congo (RDC). Les vendeurs qualifiés reçoivent une ligne de crédit pour acheter directement chez les agriculteurs sans payer tout d'avance, puis remboursent une fois leurs produits vendus.
+
+## Fonctionnement
+
+- **Agriculteurs**: s'inscrivent, deviennent visibles auprès des vendeurs de leur région, vendent à un prix convenu directement (sans intermédiaire caché), et sont payés à la livraison par mobile money ou en espèces.
+- **Vendeurs**: s'inscrivent, sont évalués selon leur activité, reçoivent une ligne de crédit, achètent chez des agriculteurs proches sans avancer tout le cash, puis remboursent selon un calendrier clair une fois leurs produits vendus.
+
+## Zones couvertes
+
+Actives maintenant : Kinshasa, Kongo Central, Kwilu. L'extension se poursuit progressivement vers les autres provinces de la RDC (Kwango, Mai-Ndombe, Kasaï, Kasaï-Central, Kasaï-Oriental, Nord-Kivu, Sud-Kivu, Haut-Katanga, Tshopo, Équateur, et au-delà).
+
+## Langues
+
+Le site est disponible en français (langue principale du marché congolais), en anglais et en swahili.
+
+## Questions fréquentes
+
+- **Est-ce un prêt usurier ?** Non. Les conditions sont fixées à l'avance, expliquées clairement avant acceptation, et ne changent pas en cours de route.
+- **Que se passe-t-il en cas de retard de paiement ?** Kuwezaa travaille avec chaque vendeur pour trouver un arrangement raisonnable plutôt que d'appliquer des pénalités automatiques.
+- **Combien coûte l'inscription ?** Gratuite, pour les agriculteurs comme pour les vendeurs.
+- **Les données sont-elles sécurisées ?** Oui — utilisées uniquement pour gérer l'inscription et la ligne de crédit, jamais revendues à des tiers.
+- **Un agriculteur doit-il rembourser un crédit ?** Non, la ligne de crédit ne concerne que les vendeurs.
+
+## Contact
+
+- Site web : https://kuwezaa.cd/
+- WhatsApp : https://wa.me/243900000000
+- E-mail : contact@kuwezaa.cd
