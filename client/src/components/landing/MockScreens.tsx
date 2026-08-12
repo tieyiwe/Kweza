@@ -7,7 +7,7 @@ function ScreenShell({ title, children }: { title: string; children: React.React
   return (
     <div className="flex h-full flex-col bg-background">
       <div className="flex items-center justify-between bg-forest px-4 py-3">
-        <span className="text-xs font-semibold text-white">Kweza</span>
+        <span className="text-xs font-semibold text-white">Kuwezaa</span>
         <span className="h-2 w-2 rounded-full bg-primary" />
       </div>
       <div className="border-b border-border px-4 py-3">

@@ -49,7 +49,7 @@ export function SiteHeader() {
           <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-primary-foreground">
             <Sprout className="h-5 w-5" />
           </span>
-          <span className="text-lg font-bold tracking-tight">Kweza</span>
+          <span className="text-lg font-bold tracking-tight">Kuwezaa</span>
         </a>
 
         <nav className="hidden items-center gap-6 lg:flex">
@@ -101,7 +101,7 @@ export function SiteHeader() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="bg-forest text-forest-foreground border-white/10">
-              <SheetTitle className="sr-only">Kweza</SheetTitle>
+              <SheetTitle className="sr-only">Kuwezaa</SheetTitle>
               <div className="mt-8 flex flex-col gap-1">
                 {navLinks.map((link) => (
                   <SheetClose asChild key={link.id}>

@@ -3,9 +3,9 @@ import type { Translations } from "./types";
 export const fr: Translations = {
   meta: {
     htmlLang: "fr",
-    title: "Kweza — Connecter agriculteurs et vendeurs en RDC",
+    title: "Kuwezaa — Connecter agriculteurs et vendeurs en RDC",
     description:
-      "Kweza relie les agriculteurs congolais aux vendeurs qualifiés grâce à une ligne de crédit simple, pour un marché plus stable et des récoltes mieux vendues.",
+      "Kuwezaa relie les agriculteurs congolais aux vendeurs qualifiés grâce à une ligne de crédit simple, pour un marché plus stable et des récoltes mieux vendues.",
   },
   nav: {
     linkHowItWorks: "Comment ça marche",
@@ -16,10 +16,10 @@ export const fr: Translations = {
     whatsapp: "WhatsApp",
   },
   hero: {
-    eyebrow: "Kweza — Agriculteurs & Vendeurs",
+    eyebrow: "Kuwezaa — Agriculteurs & Vendeurs",
     title: "Vendez plus. Achetez mieux. Payez à votre rythme.",
     subtitle:
-      "Kweza connecte les agriculteurs congolais à des vendeurs sérieux et donne aux vendeurs qualifiés une ligne de crédit pour acheter directement chez les producteurs. Un marché plus fiable, des prix plus justes.",
+      "Kuwezaa connecte les agriculteurs congolais à des vendeurs sérieux et donne aux vendeurs qualifiés une ligne de crédit pour acheter directement chez les producteurs. Un marché plus fiable, des prix plus justes.",
     ctaFarmer: "Je suis agriculteur",
     ctaSeller: "Je suis vendeur",
     ctaWhatsapp: "Discuter sur WhatsApp",
@@ -29,7 +29,7 @@ export const fr: Translations = {
     eyebrow: "La réalité du terrain",
     title: "Vendre et acheter reste trop incertain",
     subtitle:
-      "Agriculteurs comme vendeurs font face aux mêmes obstacles depuis des années. Kweza s'attaque directement à ces trois blocages.",
+      "Agriculteurs comme vendeurs font face aux mêmes obstacles depuis des années. Kuwezaa s'attaque directement à ces trois blocages.",
     points: [
       {
         title: "Des acheteurs peu fiables",
@@ -92,7 +92,7 @@ export const fr: Translations = {
     farmerMockupLabel: "Espace agriculteur",
     sellerMockupLabel: "Espace vendeur",
     flow: {
-      title: "Le cycle du crédit Kweza",
+      title: "Le cycle du crédit Kuwezaa",
       subtitle: "Un cercle vertueux, du crédit jusqu'au remboursement.",
       requestCredit: "Demande de crédit",
       buyFromFarmer: "Achat chez l'agriculteur",
@@ -127,7 +127,7 @@ export const fr: Translations = {
     eyebrow: "La ligne de crédit, expliquée simplement",
     title: "Pas de piège, pas de surprise",
     subtitle:
-      "La ligne de crédit Kweza permet aux vendeurs qualifiés d'acheter chez les agriculteurs sans payer tout d'avance. Voici comment ça fonctionne, en toute transparence.",
+      "La ligne de crédit Kuwezaa permet aux vendeurs qualifiés d'acheter chez les agriculteurs sans payer tout d'avance. Voici comment ça fonctionne, en toute transparence.",
     points: [
       {
         title: "Qui peut en bénéficier ?",
@@ -157,7 +157,7 @@ export const fr: Translations = {
     eyebrow: "Notre mission",
     title: "Un impact au-delà de la transaction",
     subtitle:
-      "Kweza construit une chaîne d'approvisionnement locale plus solide, pour que chaque acteur — du champ à l'étal — en profite.",
+      "Kuwezaa construit une chaîne d'approvisionnement locale plus solide, pour que chaque acteur — du champ à l'étal — en profite.",
     pillars: [
       {
         title: "Des chaînes d'approvisionnement renforcées",
@@ -177,10 +177,10 @@ export const fr: Translations = {
     eyebrow: "Où sommes-nous présents",
     title: "Zones couvertes",
     subtitle:
-      "Kweza démarre avec un programme pilote et s'étend progressivement à travers la RDC. Voici où nous en sommes aujourd'hui.",
+      "Kuwezaa démarre avec un programme pilote et s'étend progressivement à travers la RDC. Voici où nous en sommes aujourd'hui.",
     liveLabel: "Actif maintenant",
     soonLabel: "Bientôt disponible",
-    note: "Vous ne voyez pas votre province ? Inscrivez-vous quand même — nous vous contacterons dès que Kweza arrive près de chez vous.",
+    note: "Vous ne voyez pas votre province ? Inscrivez-vous quand même — nous vous contacterons dès que Kuwezaa arrive près de chez vous.",
   },
   trust: {
     eyebrow: "Confiance & sécurité",
@@ -206,7 +206,7 @@ export const fr: Translations = {
   socialProof: {
     eyebrow: "Ils nous font confiance",
     title: "Notre communauté grandit",
-    subtitle: "Des agriculteurs et vendeurs comme vous testent déjà Kweza sur le terrain.",
+    subtitle: "Des agriculteurs et vendeurs comme vous testent déjà Kuwezaa sur le terrain.",
     emptyTitle: "Le programme pilote démarre",
     emptyBody:
       "Nous accueillons nos premiers agriculteurs et vendeurs. Les témoignages et chiffres réels seront publiés ici dès que notre premier cycle de vente sera terminé.",
@@ -220,7 +220,7 @@ export const fr: Translations = {
       {
         question: "Est-ce que c'est un prêt usurier ?",
         answer:
-          "Non. La ligne de crédit Kweza n'est pas un prêt à taux abusif. Les conditions sont fixées à l'avance, expliquées clairement avant que vous acceptiez, et ne changent pas en cours de route.",
+          "Non. La ligne de crédit Kuwezaa n'est pas un prêt à taux abusif. Les conditions sont fixées à l'avance, expliquées clairement avant que vous acceptiez, et ne changent pas en cours de route.",
       },
       {
         question: "Que se passe-t-il si je ne peux pas rembourser à temps ?",
@@ -233,7 +233,7 @@ export const fr: Translations = {
           "Oui. Vos informations personnelles et professionnelles ne sont utilisées que pour évaluer votre inscription et gérer votre ligne de crédit. Elles ne sont jamais revendues à des tiers.",
       },
       {
-        question: "Combien coûte l'inscription sur Kweza ?",
+        question: "Combien coûte l'inscription sur Kuwezaa ?",
         answer:
           "L'inscription est entièrement gratuite, pour les agriculteurs comme pour les vendeurs.",
       },
@@ -248,7 +248,7 @@ export const fr: Translations = {
           "Vous convenez du prix et de la quantité avec le vendeur, puis recevez votre paiement par mobile money ou en espèces à la livraison.",
       },
       {
-        question: "Kweza est-il disponible dans ma province ?",
+        question: "Kuwezaa est-il disponible dans ma province ?",
         answer:
           "Consultez la section « Zones couvertes » ci-dessus. Si votre province n'est pas encore active, inscrivez-vous quand même : nous vous préviendrons dès l'ouverture.",
       },
@@ -256,9 +256,9 @@ export const fr: Translations = {
   },
   form: {
     eyebrow: "Prêt à commencer ?",
-    title: "Inscrivez-vous sur Kweza",
+    title: "Inscrivez-vous sur Kuwezaa",
     subtitle:
-      "Remplissez le formulaire ci-dessous pour rejoindre la communauté Kweza. Cela prend moins de cinq minutes.",
+      "Remplissez le formulaire ci-dessous pour rejoindre la communauté Kuwezaa. Cela prend moins de cinq minutes.",
     role: {
       sectionTitle: "Choisissez votre profil",
       farmerTitle: "Agriculteur",
@@ -327,7 +327,7 @@ export const fr: Translations = {
     },
     success: {
       title: "Inscription réussie !",
-      body: "Merci de vous être inscrit sur Kweza. Nous avons bien reçu vos informations et vous contacterons prochainement pour les prochaines étapes.",
+      body: "Merci de vous être inscrit sur Kuwezaa. Nous avons bien reçu vos informations et vous contacterons prochainement pour les prochaines étapes.",
       close: "Fermer",
     },
   },
@@ -335,13 +335,13 @@ export const fr: Translations = {
     tagline: "Connecter les agriculteurs et les vendeurs à travers le Congo.",
     contactTitle: "Contactez-nous",
     whatsapp: "Discuter sur WhatsApp",
-    email: "contact@kweza.cd",
+    email: "contact@kuwezaa.cd",
     linksTitle: "Liens utiles",
     privacy: "Politique de confidentialité",
     terms: "Conditions générales",
     contact: "Nous contacter",
     admin: "Espace administrateur",
-    rights: "Kweza. Renforcer l'agriculture en RDC.",
+    rights: "Kuwezaa. Renforcer l'agriculture en RDC.",
   },
   products: {
     cassava: "Manioc",

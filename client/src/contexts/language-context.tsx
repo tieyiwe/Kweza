@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
 import { DEFAULT_LANGUAGE, dictionaries, type Language, type Translations } from "@/lib/i18n";
 
-const STORAGE_KEY = "kweza-language";
+const STORAGE_KEY = "kuwezaa-language";
 
 interface LanguageContextValue {
   language: Language;
