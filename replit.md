@@ -1,6 +1,6 @@
 # Overview
 
-This is a full-stack web application built for agricultural registration and management, specifically designed for the Democratic Republic of Congo (Kweza platform). The application allows farmers and sellers to register their information, including details about their agricultural products, business operations, and credit needs. It features a modern React frontend with a Node.js/Express backend, using PostgreSQL for data persistence.
+This is a full-stack web application built for agricultural registration and management, specifically designed for the Democratic Republic of Congo (Kuwezaa platform). The application allows farmers and sellers to register their information, including details about their agricultural products, business operations, and credit needs. It features a modern React frontend with a Node.js/Express backend, using PostgreSQL for data persistence.
 
 The application includes:
 - **Public Registration Form** (/) - Dual-purpose form for farmers and sellers with role-specific fields
@@ -87,7 +87,7 @@ Preferred communication style: Simple, everyday language.
 - **Proper Escaping**: Handles special characters (quotes, commas, newlines) correctly per RFC 4180
 - **Array Formatting**: Crops and products displayed with semicolon separators
 - **Download**: Sets proper Content-Type and Content-Disposition headers
-- **Filename**: kweza-registrations.csv
+- **Filename**: kuwezaa-registrations.csv
 
 ## External Dependencies
 

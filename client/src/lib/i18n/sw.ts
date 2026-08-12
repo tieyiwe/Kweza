@@ -3,9 +3,9 @@ import type { Translations } from "./types";
 export const sw: Translations = {
   meta: {
     htmlLang: "sw",
-    title: "Kweza — Kuunganisha Wakulima na Wauzaji nchini DRC",
+    title: "Kuwezaa — Kuunganisha Wakulima na Wauzaji nchini DRC",
     description:
-      "Kweza inaunganisha wakulima wa Kongo na wauzaji waliohitimu kupitia mkopo rahisi, kwa soko imara zaidi na mavuno yanayouzwa vizuri zaidi.",
+      "Kuwezaa inaunganisha wakulima wa Kongo na wauzaji waliohitimu kupitia mkopo rahisi, kwa soko imara zaidi na mavuno yanayouzwa vizuri zaidi.",
   },
   nav: {
     linkHowItWorks: "Jinsi inavyofanya kazi",
@@ -16,10 +16,10 @@ export const sw: Translations = {
     whatsapp: "WhatsApp",
   },
   hero: {
-    eyebrow: "Kweza — Wakulima na Wauzaji",
+    eyebrow: "Kuwezaa — Wakulima na Wauzaji",
     title: "Uza zaidi. Nunua vizuri zaidi. Lipa kwa wakati wako.",
     subtitle:
-      "Kweza inaunganisha wakulima wa Kongo na wauzaji wa kweli, na inawapa wauzaji waliohitimu mkopo wa kununua moja kwa moja kutoka kwa wakulima. Soko la kuaminika zaidi, bei za haki zaidi.",
+      "Kuwezaa inaunganisha wakulima wa Kongo na wauzaji wa kweli, na inawapa wauzaji waliohitimu mkopo wa kununua moja kwa moja kutoka kwa wakulima. Soko la kuaminika zaidi, bei za haki zaidi.",
     ctaFarmer: "Mimi ni mkulima",
     ctaSeller: "Mimi ni muuzaji",
     ctaWhatsapp: "Ongea nasi kwa WhatsApp",
@@ -29,7 +29,7 @@ export const sw: Translations = {
     eyebrow: "Hali halisi shambani",
     title: "Kuuza na kununua bado ni ngumu",
     subtitle:
-      "Wakulima na wauzaji wanakabiliana na vikwazo vilevile kwa miaka mingi. Kweza inashughulikia vikwazo hivi vitatu moja kwa moja.",
+      "Wakulima na wauzaji wanakabiliana na vikwazo vilevile kwa miaka mingi. Kuwezaa inashughulikia vikwazo hivi vitatu moja kwa moja.",
     points: [
       {
         title: "Wanunuzi wasioaminika",
@@ -91,7 +91,7 @@ export const sw: Translations = {
     farmerMockupLabel: "Mwonekano wa mkulima",
     sellerMockupLabel: "Mwonekano wa muuzaji",
     flow: {
-      title: "Mzunguko wa mkopo wa Kweza",
+      title: "Mzunguko wa mkopo wa Kuwezaa",
       subtitle: "Mzunguko chanya, kutoka mkopo hadi malipo.",
       requestCredit: "Omba mkopo",
       buyFromFarmer: "Nunua kwa mkulima",
@@ -126,7 +126,7 @@ export const sw: Translations = {
     eyebrow: "Kiwango cha mkopo, kwa maelezo rahisi",
     title: "Hakuna mtego, hakuna mshangao",
     subtitle:
-      "Kiwango cha mkopo cha Kweza kinawawezesha wauzaji waliohitimu kununua kutoka kwa wakulima bila kulipa kila kitu mapema. Hivi ndivyo inavyofanya kazi, kwa uwazi kamili.",
+      "Kiwango cha mkopo cha Kuwezaa kinawawezesha wauzaji waliohitimu kununua kutoka kwa wakulima bila kulipa kila kitu mapema. Hivi ndivyo inavyofanya kazi, kwa uwazi kamili.",
     points: [
       {
         title: "Nani anaweza kustahiki?",
@@ -156,7 +156,7 @@ export const sw: Translations = {
     eyebrow: "Dhamira yetu",
     title: "Athari zaidi ya muamala",
     subtitle:
-      "Kweza inajenga msururu wa ugavi wa ndani ulio imara zaidi, ili kila mhusika — kutoka shambani hadi sokoni — anufaike.",
+      "Kuwezaa inajenga msururu wa ugavi wa ndani ulio imara zaidi, ili kila mhusika — kutoka shambani hadi sokoni — anufaike.",
     pillars: [
       {
         title: "Minyororo ya ugavi iliyo imara",
@@ -176,10 +176,10 @@ export const sw: Translations = {
     eyebrow: "Maeneo tunayofanya kazi",
     title: "Maeneo tunayofikia",
     subtitle:
-      "Kweza inaanza na mradi wa majaribio na kupanuka hatua kwa hatua kote DRC. Hivi ndivyo tulivyofikia leo.",
+      "Kuwezaa inaanza na mradi wa majaribio na kupanuka hatua kwa hatua kote DRC. Hivi ndivyo tulivyofikia leo.",
     liveLabel: "Inapatikana sasa",
     soonLabel: "Inakuja hivi karibuni",
-    note: "Hamuoni mkoa wenu? Jisajilini hata hivyo — tutawasiliana nanyi mara Kweza itakapofika karibu nanyi.",
+    note: "Hamuoni mkoa wenu? Jisajilini hata hivyo — tutawasiliana nanyi mara Kuwezaa itakapofika karibu nanyi.",
   },
   trust: {
     eyebrow: "Uaminifu na usalama",
@@ -204,7 +204,7 @@ export const sw: Translations = {
   socialProof: {
     eyebrow: "Wanaotuamini",
     title: "Jumuiya yetu inakua",
-    subtitle: "Wakulima na wauzaji kama wewe tayari wanajaribu Kweza uwandani.",
+    subtitle: "Wakulima na wauzaji kama wewe tayari wanajaribu Kuwezaa uwandani.",
     emptyTitle: "Mradi wetu wa majaribio unaanza",
     emptyBody:
       "Tunakaribisha wakulima na wauzaji wetu wa kwanza. Ushuhuda na takwimu halisi zitachapishwa hapa mara mzunguko wetu wa kwanza wa mauzo utakapokamilika.",
@@ -218,7 +218,7 @@ export const sw: Translations = {
       {
         question: "Je, huu ni mkopo wa riba kali?",
         answer:
-          "Hapana. Kiwango cha mkopo cha Kweza si mkopo wa riba kali. Masharti yanawekwa mapema, yanaelezwa wazi kabla hujakubali, na hayabadiliki njiani.",
+          "Hapana. Kiwango cha mkopo cha Kuwezaa si mkopo wa riba kali. Masharti yanawekwa mapema, yanaelezwa wazi kabla hujakubali, na hayabadiliki njiani.",
       },
       {
         question: "Nini kitatokea nisipoweza kulipa kwa wakati?",
@@ -231,7 +231,7 @@ export const sw: Translations = {
           "Ndiyo. Taarifa zako binafsi na za biashara zinatumika tu kukagua maombi yako na kusimamia mkopo wako. Hazitauzwa tena kwa watu wengine.",
       },
       {
-        question: "Kujisajili kwenye Kweza kunagharimu kiasi gani?",
+        question: "Kujisajili kwenye Kuwezaa kunagharimu kiasi gani?",
         answer: "Kujisajili ni bure kabisa, kwa wakulima na wauzaji.",
       },
       {
@@ -245,7 +245,7 @@ export const sw: Translations = {
           "Unakubaliana na muuzaji kuhusu bei na kiasi, kisha unapokea malipo kupitia pesa za simu au taslimu wakati wa uwasilishaji.",
       },
       {
-        question: "Je, Kweza inapatikana katika mkoa wangu?",
+        question: "Je, Kuwezaa inapatikana katika mkoa wangu?",
         answer:
           "Angalia sehemu ya \"Maeneo tunayofikia\" hapo juu. Kama mkoa wako haujaanza bado, jisajili hata hivyo — tutakujulisha mara utakapofunguliwa.",
       },
@@ -253,8 +253,8 @@ export const sw: Translations = {
   },
   form: {
     eyebrow: "Uko tayari kuanza?",
-    title: "Jisajili kwenye Kweza",
-    subtitle: "Jaza fomu hapa chini ili kujiunga na jumuiya ya Kweza. Inachukua chini ya dakika tano.",
+    title: "Jisajili kwenye Kuwezaa",
+    subtitle: "Jaza fomu hapa chini ili kujiunga na jumuiya ya Kuwezaa. Inachukua chini ya dakika tano.",
     role: {
       sectionTitle: "Chagua wasifu wako",
       farmerTitle: "Mkulima",
@@ -323,7 +323,7 @@ export const sw: Translations = {
     },
     success: {
       title: "Usajili umefanikiwa!",
-      body: "Asante kwa kujisajili na Kweza. Tumepokea taarifa zako na tutawasiliana nawe hivi karibuni kuhusu hatua zinazofuata.",
+      body: "Asante kwa kujisajili na Kuwezaa. Tumepokea taarifa zako na tutawasiliana nawe hivi karibuni kuhusu hatua zinazofuata.",
       close: "Funga",
     },
   },
@@ -331,13 +331,13 @@ export const sw: Translations = {
     tagline: "Kuunganisha wakulima na wauzaji kote Kongo.",
     contactTitle: "Wasiliana nasi",
     whatsapp: "Ongea nasi kwa WhatsApp",
-    email: "contact@kweza.cd",
+    email: "contact@kuwezaa.cd",
     linksTitle: "Viungo muhimu",
     privacy: "Sera ya faragha",
     terms: "Masharti na vigezo",
     contact: "Wasiliana nasi",
     admin: "Eneo la msimamizi",
-    rights: "Kweza. Kuimarisha kilimo nchini DRC.",
+    rights: "Kuwezaa. Kuimarisha kilimo nchini DRC.",
   },
   products: {
     cassava: "Muhogo",

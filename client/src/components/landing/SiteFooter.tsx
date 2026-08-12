@@ -16,7 +16,7 @@ export function SiteFooter() {
               <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-primary-foreground">
                 <Sprout className="h-5 w-5" />
               </span>
-              <span className="text-lg font-bold">Kweza</span>
+              <span className="text-lg font-bold">Kuwezaa</span>
             </div>
             <p className="mt-3 max-w-xs text-sm text-white/70">{t.footer.tagline}</p>
             <div className="mt-4 flex items-center gap-3">

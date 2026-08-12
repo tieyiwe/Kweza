@@ -3,9 +3,9 @@ import type { Translations } from "./types";
 export const en: Translations = {
   meta: {
     htmlLang: "en",
-    title: "Kweza — Connecting Farmers and Sellers in the DRC",
+    title: "Kuwezaa — Connecting Farmers and Sellers in the DRC",
     description:
-      "Kweza connects Congolese farmers with qualified sellers through a simple credit line, for a more stable market and better-sold harvests.",
+      "Kuwezaa connects Congolese farmers with qualified sellers through a simple credit line, for a more stable market and better-sold harvests.",
   },
   nav: {
     linkHowItWorks: "How it works",
@@ -16,10 +16,10 @@ export const en: Translations = {
     whatsapp: "WhatsApp",
   },
   hero: {
-    eyebrow: "Kweza — Farmers & Sellers",
+    eyebrow: "Kuwezaa — Farmers & Sellers",
     title: "Sell more. Buy better. Pay at your own pace.",
     subtitle:
-      "Kweza connects Congolese farmers with serious sellers, and gives qualified sellers a credit line to buy directly from producers. A more reliable market, fairer prices.",
+      "Kuwezaa connects Congolese farmers with serious sellers, and gives qualified sellers a credit line to buy directly from producers. A more reliable market, fairer prices.",
     ctaFarmer: "I'm a farmer",
     ctaSeller: "I'm a seller",
     ctaWhatsapp: "Chat on WhatsApp",
@@ -29,7 +29,7 @@ export const en: Translations = {
     eyebrow: "The reality on the ground",
     title: "Buying and selling still feels too uncertain",
     subtitle:
-      "Farmers and sellers have faced the same obstacles for years. Kweza tackles these three blockers directly.",
+      "Farmers and sellers have faced the same obstacles for years. Kuwezaa tackles these three blockers directly.",
     points: [
       {
         title: "Unreliable buyers",
@@ -92,7 +92,7 @@ export const en: Translations = {
     farmerMockupLabel: "Farmer view",
     sellerMockupLabel: "Seller view",
     flow: {
-      title: "The Kweza credit cycle",
+      title: "The Kuwezaa credit cycle",
       subtitle: "A virtuous circle, from credit to repayment.",
       requestCredit: "Request credit",
       buyFromFarmer: "Buy from farmer",
@@ -127,7 +127,7 @@ export const en: Translations = {
     eyebrow: "The credit line, explained simply",
     title: "No catch, no surprises",
     subtitle:
-      "The Kweza credit line lets qualified sellers buy from farmers without paying everything upfront. Here's exactly how it works.",
+      "The Kuwezaa credit line lets qualified sellers buy from farmers without paying everything upfront. Here's exactly how it works.",
     points: [
       {
         title: "Who can qualify?",
@@ -157,7 +157,7 @@ export const en: Translations = {
     eyebrow: "Our mission",
     title: "Impact beyond the transaction",
     subtitle:
-      "Kweza is building a stronger local supply chain, so every player — from field to market stall — benefits.",
+      "Kuwezaa is building a stronger local supply chain, so every player — from field to market stall — benefits.",
     pillars: [
       {
         title: "Stronger supply chains",
@@ -177,10 +177,10 @@ export const en: Translations = {
     eyebrow: "Where we operate",
     title: "Coverage",
     subtitle:
-      "Kweza is starting with a pilot program and expanding gradually across the DRC. Here's where we stand today.",
+      "Kuwezaa is starting with a pilot program and expanding gradually across the DRC. Here's where we stand today.",
     liveLabel: "Live now",
     soonLabel: "Coming soon",
-    note: "Don't see your province? Sign up anyway — we'll reach out as soon as Kweza launches near you.",
+    note: "Don't see your province? Sign up anyway — we'll reach out as soon as Kuwezaa launches near you.",
   },
   trust: {
     eyebrow: "Trust & security",
@@ -205,7 +205,7 @@ export const en: Translations = {
   socialProof: {
     eyebrow: "Trusted by our community",
     title: "Our community is growing",
-    subtitle: "Farmers and sellers like you are already testing Kweza on the ground.",
+    subtitle: "Farmers and sellers like you are already testing Kuwezaa on the ground.",
     emptyTitle: "Our pilot program is just getting started",
     emptyBody:
       "We're welcoming our first farmers and sellers. Real testimonials and numbers will be published here once our first sales cycle wraps up.",
@@ -219,7 +219,7 @@ export const en: Translations = {
       {
         question: "Is this a predatory loan?",
         answer:
-          "No. The Kweza credit line is not a high-interest loan. Terms are set in advance, explained clearly before you accept, and never change midway through.",
+          "No. The Kuwezaa credit line is not a high-interest loan. Terms are set in advance, explained clearly before you accept, and never change midway through.",
       },
       {
         question: "What happens if I can't repay on time?",
@@ -232,7 +232,7 @@ export const en: Translations = {
           "Yes. Your personal and business information is only used to review your application and manage your credit line. It is never resold to third parties.",
       },
       {
-        question: "How much does it cost to sign up on Kweza?",
+        question: "How much does it cost to sign up on Kuwezaa?",
         answer: "Signing up is completely free, for farmers and sellers alike.",
       },
       {
@@ -246,7 +246,7 @@ export const en: Translations = {
           "You agree on price and quantity with the seller, then receive payment by mobile money or cash on delivery.",
       },
       {
-        question: "Is Kweza available in my province?",
+        question: "Is Kuwezaa available in my province?",
         answer:
           "Check the \"Coverage\" section above. If your province isn't live yet, sign up anyway — we'll notify you as soon as it opens.",
       },
@@ -254,8 +254,8 @@ export const en: Translations = {
   },
   form: {
     eyebrow: "Ready to get started?",
-    title: "Sign up for Kweza",
-    subtitle: "Fill out the form below to join the Kweza community. It takes less than five minutes.",
+    title: "Sign up for Kuwezaa",
+    subtitle: "Fill out the form below to join the Kuwezaa community. It takes less than five minutes.",
     role: {
       sectionTitle: "Choose your profile",
       farmerTitle: "Farmer",
@@ -324,7 +324,7 @@ export const en: Translations = {
     },
     success: {
       title: "Registration successful!",
-      body: "Thank you for registering with Kweza. We've received your information and will contact you shortly about next steps.",
+      body: "Thank you for registering with Kuwezaa. We've received your information and will contact you shortly about next steps.",
       close: "Close",
     },
   },
@@ -332,13 +332,13 @@ export const en: Translations = {
     tagline: "Connecting farmers and sellers across the Congo.",
     contactTitle: "Contact us",
     whatsapp: "Chat on WhatsApp",
-    email: "contact@kweza.cd",
+    email: "contact@kuwezaa.cd",
     linksTitle: "Useful links",
     privacy: "Privacy policy",
     terms: "Terms and conditions",
     contact: "Contact us",
     admin: "Admin area",
-    rights: "Kweza. Strengthening agriculture in the DRC.",
+    rights: "Kuwezaa. Strengthening agriculture in the DRC.",
   },
   products: {
     cassava: "Cassava",
